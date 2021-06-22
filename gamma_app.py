@@ -63,7 +63,7 @@ retrofitted_stock = pd.concat([retrofitted_hhs, unretrofitted_hhs]).sort_index()
 fabric_heat_loss_post_retrofit = calculate_fabric_heat_loss(retrofitted_stock)
 fabric_heat_loss_improvement = (
     fabric_heat_loss_pre_retrofit - fabric_heat_loss_post_retrofit
-) / known_indiv_hh["total_floor_area"]
+) / known_indiv_hh["floor_area"]
 
 energy_value_post_retrofit = (
     known_indiv_hh["energy_value"] - fabric_heat_loss_improvement
